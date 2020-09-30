@@ -7,11 +7,10 @@ def valid_move?(board, index)
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
-def position_taken?(array, index)
-  if array[index] == "X" || array[index] == "O"
-     return true
-  elsif array[index] == " " || array[index] == "" || array[index] == nil
-     return false
-  
-  end
+def position_taken?(board, index)
+   if (board[index] == " ") || (board[index] == "") || (board[index] == nil)
+      return false 
+   else
+      return true
+   end
 end
